@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sklopljeno nihalo</title>
+	<meta charset="utf-8">
+    <link href='../assets/stylesheets/nihalo.css' rel='stylesheet' type='text/css'>
+    <link href='../assets/stylesheets/osnova.css' rel='stylesheet' type='text/css'>
+    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js' type='text/javascript'></script>
+    <script src='../assets/javascripts/resize.js' type='text/javascript'></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </head>
+  <body style='margin: 0;max-width:100%;padding:0'>
+    <div class='sidebar'>
+      <form id='set_variables_form'>
+        <label for='mass1'>Masa prve:</label>
+        <input id='mass1' max='50' min='1' type='range' value='10'>
+        <label for='mass2'>Masa druge:</label>
+        <input id='mass2' max='50' min='1' type='range' value='10'>
+        <label for='Phi1'>Kot prve:</label>
+        <input id='Phi1' max='90' min='0' type='range' value='50'>
+        <label for='Phi2'>Kot druge:</label>
+        <input id='Phi2' max='90' min='0' type='range' value='65'>
+        <input class='submit-btn' type='submit' value='Start Simulation'>
+      </form>
+      <footer style='padding-left: 10px'>
+		
+		<!--Začetek modala-->
+		<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">O projektu</button>
+		<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog modal-lg">
+			<div class="modal-content" align ="center">
+					<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" align="center">Izbrana poglavja računalništva z didaktiko: Seminarska naloga</h4>
+					</div>
+					<div class="modal-body">
+						
+						<div class="row">
+						<h3 align="center"> <u>O projektu</u></h3><br>
+						<p align="justify">V sklopu predmeta "<em>Izbrana poglavja računalništva z didaktiko</em>" sva izdelala interaktivno spletno simulacijo. Simulacija predstavlja navidezno demonstracijo nihanja dveh sklopljenih nihal. Zaradi težavnega razumevanja, pri obravnavanju omenjene teme, je dodatna ponazoritev primerna ideja za uporabo informacijsko komunikacijskih tehnologij. <br>
+						Glavna prednost projekta pa se pokaže v interaktivnosti simulacije, ki omogoča uporabniku spreminjanje teže posameznih krogel ter kota, pod katerima se simulacija prične. Posledično je možna neomejena kombinacija raznolikih zanimivih poskusov, ki so dobro primerljivi s poskusi v resničnem svetu. Nadgradnja simulacje bi vključevala dodajanje nihal, spreminjanje dolžine posameznih nihal ter gravitacije.
+						</p>
+						<h3 align="center"> <u>Uporabljena tehnologija</u></h3><br>
+						<p align="justify">
+						Za realizacijo projekta sva uporabila več različnih spletnih tehnologij, jezikov in knjižnic. Osnovo spletne strani drži HTML5, ki pa je namenjen le za vključitev meta podatkov, JS in Bootstrap elementov ter CSS sloge. S pomočjo Bootstrap knjižnice sva razdelila spletno stran na dinamično mrežo(grid) ter dodala funkcijo <em>modal</em>, ki služi kot dodatno okno. <br>Znotraj <em>canvas</em> značke sva vgradila JS skripto, ki je grafično ponazori simulacijo, pri čemer upošteva zahtevane parametre. Zaradi zahtevnosti matematičnih izračunov sva znotraj JS skripte potrebovala dodatno knjižnico <em>Math.</em>
+						</p>
+						<h3 align="center"> <u>Avtorja</u></h3><br>
+							<div class="col-sm-6" style="">
+							
+							<p align="center">Hočevar Mitja<br><a href="mailto:mitja.hocevar7@gmail.com">mitja.hocevar7@gmail.com</a></p>
+							
+							
+							</div>
+							<div class="col-sm-6" style="">
+							
+							<p align="center">Bogataj Tadej<br><a href="mailto:bogataj.tadej@gmail.com">bogataj.tadej@gmail.com</a></p>
+							
+							</div>
+						</div>
+						<h3 align="center"> <u>Koda</u></h3><br>
+						<p>Izvorna koda je na voljo na GitHub povezavi: </p>
+						 <a href="https://github.com/Tadej0" target="blank"><img align = "center" src="https://wasin.io/wp-content/uploads/2015/05/showimage.png" class="img-responsive" alt="GitHub"> 
+						
+					</div>
+					<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Zapri</button>
+				</div>
+			</div>
+		</div>
+		</div>
+      </footer>
+    </div>
+    <canvas class='phys-canvas' height='600' id='myCanvas' width='700'></canvas>
+    <script src='../assets/javascripts/nihalo.js' type='text/javascript'></script>
+  </body>
+</html>
